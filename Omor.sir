@@ -1,15 +1,17 @@
 module.exports.config = {
-    name: "omorsir",
-    version: "1.0.0",
-    hasPermssion: 0,
-    credits: "EMon-BHai",
-    description: "GPTGO by EMon-BHai",
-    commandCategory: "ai",
-    usages: "[ask]",
-    usePrefix: false,
-    cooldowns: 2,
+	name: "omorsir",
+    version: "1.0.1",
+    permission: 2,
+    credits: "BADOL-KHAN",
+    prefix: false,
+    description: "ask any thing",
+    category: "admin",
+    usages: "",
+    cooldowns: 5,
+    dependencies: {
+        "openai": ""
+    }
 };
-
 module.exports.run = async function({ api, event, args }) {
     const axios = require("axios");
     let { messageID, threadID, senderID, body } = event;
